@@ -9,8 +9,8 @@ account_sid = os.getenv("TWILIO_ACCOUNT_SID")
 auth_token = os.getenv("TWILIO_AUTH_TOKEN")
 client = Client(account_sid, auth_token)
 
-message = Client.messages.create(
-    body="Hello world from twilio", from_="twilio number", to=phone_number
+message = client.messages.create(
+    body="Hello world from twilio", from_="+233550815604", to=phone_number
 )
 
 print("SMS has been sent")
